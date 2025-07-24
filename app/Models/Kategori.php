@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Kategori extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function dokumen()
+    {
+        return $this->hasMany(Dokumen::class);
+    }
 }
